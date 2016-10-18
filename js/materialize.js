@@ -445,6 +445,7 @@ if ($) {
 
   $(document).ready(function(){
     $('.collapsible').collapsible();
+    $(".button-collapse").sideNav();
   });
 }( jQuery ));;(function ($) {
 
@@ -681,6 +682,7 @@ if ($) {
 
   $(document).ready(function(){
     $('.dropdown-button').dropdown();
+    $(".button-collapse").sideNav();
   });
 }( jQuery ));
 ;(function($) {
@@ -1333,6 +1335,7 @@ $(document).ready(function(){
 
   $(document).ready(function(){
     $('ul.tabs').tabs();
+    $(".button-collapse").sideNav();
   });
 }( jQuery ));
 ;(function ($) {
@@ -1536,6 +1539,7 @@ $(document).ready(function(){
 
   $(document).ready(function(){
      $('.tooltipped').tooltip();
+     $(".button-collapse").sideNav();
    });
 }( jQuery ));
 ;/*!
@@ -1960,7 +1964,7 @@ $(document).ready(function(){
         }
         else {
           // Insert as text;
-          toast.innerHTML = html; 
+          toast.innerHTML = html;
         }
         // Bind hammer
         var hammerHandler = new Hammer(toast, {prevent_default: false});
@@ -2539,9 +2543,9 @@ $(document).ready(function(){
 		    var offset = $(this.hash).offset().top + 1;
 
 //          offset - 200 allows elements near bottom of page to scroll
-			
+
 	    	$('html, body').animate({ scrollTop: offset - 200 }, {duration: 400, queue: false, easing: 'easeOutCubic'});
-			
+
 		  });
 		});
 		options = options || {
@@ -2670,6 +2674,8 @@ $(document).ready(function(){
     // Add active if input element has been pre-populated on document ready
     $(document).ready(function() {
       Materialize.updateTextFields();
+      $(".dropdown-button").dropdown();
+      $(".button-collapse").sideNav();
     });
 
     // HTML DOM FORM RESET handling
@@ -2742,7 +2748,7 @@ $(document).ready(function(){
         $(this).addClass('tabbed');
         var $this = $(this);
         $this.one('blur', function(e) {
-          
+
           $(this).removeClass('tabbed');
         });
         return;
