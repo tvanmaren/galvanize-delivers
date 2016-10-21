@@ -1,0 +1,4 @@
+/* icon prefix focus color */
+.input-field .prefix.active, .text-field .prefix.active {
+  color: #ff0000;
+}
