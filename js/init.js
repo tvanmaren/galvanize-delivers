@@ -3,8 +3,8 @@ $(function() {
 
     const $cartTable = $('#cartTable');
     const $menu = $('#menu');
-    // const $submit = $('#download-button');
-    
+    const $submit = $('#download-button');
+
     //ideally we'd want to import our menu cards as an object of objects in a .js file and inject them dynamically//
 
     function updateCart() {
@@ -48,10 +48,12 @@ $(function() {
         }
     }
 
-    // function submit() {
-    //   console.log($cartTable.text());
-    // }
+    function submit() {
+        console.log($cartTable.text());
+// Materialize.toast(message, displayLength, className, completeCallback);
+        Materialize.toast('Success!', 4000);
+    }
 
     $menu.click(addToCart);
-    // $submit.click(submit);
+    $submit.click(submit);
 });
