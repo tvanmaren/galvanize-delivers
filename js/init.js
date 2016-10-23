@@ -5,7 +5,7 @@ $(function() {
     const $menu = $('#menu');
     const $submit = $('#download-button');
 
-    //ideally we'd want to import our menu cards as an object of objects in a .js file and inject them dynamically//
+    //ideally we'd want to import our menu cards as an object of objects in a .js file and inject them dynamically here//
 
     function updateCart() {
         const $cartTotal = $('#total');
@@ -50,10 +50,10 @@ $(function() {
 
     function submit() {
         console.log($cartTable.text());
-        if (($cartTable.find('td').length) && $('#icon_business').length && $('#icon_telephone').length && $('#icon_name').length) {
-          Materialize.toast('Success!', 4000);
+        if (($cartTable.find('td').length) && $('#address').val() && $('#phone').val() && $('#name').val()) {
+          Materialize.toast('Thank you for your order!', 4000);
         } else {
-          Materialize.toast('Please choose a valid menu item, name, phone number, and business', 4000);
+          Materialize.toast('Something\'s wrong!\nPlease validate your order information and try again', 4000);
         }
 
     }
