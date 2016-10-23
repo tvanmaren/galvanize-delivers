@@ -50,8 +50,12 @@ $(function() {
 
     function submit() {
         console.log($cartTable.text());
-// Materialize.toast(message, displayLength, className, completeCallback);
-        Materialize.toast('Success!', 4000);
+        if (($cartTable.find('td').length) && $('#icon_business').length && $('#icon_telephone').length && $('#icon_name').length) {
+          Materialize.toast('Success!', 4000);
+        } else {
+          Materialize.toast('Please choose a valid menu item, name, phone number, and business', 4000);
+        }
+
     }
 
     $menu.click(addToCart);
