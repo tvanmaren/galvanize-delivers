@@ -3,7 +3,7 @@ $(function() {
 
     const $cartTable = $('#cartTable');
     const $menu = $('#menu');
-    const $submit = $('#download-button');
+    const $submit = $('#submit-button');
 
     //ideally we'd want to import our menu cards as an object of objects in a .js file and inject them dynamically here//
 
@@ -48,16 +48,20 @@ $(function() {
         }
     }
 
-    function submit() {
+    function submit(event) {
+        // event.preventDefault();
         console.log($cartTable.text());
         if (($cartTable.find('td').length) && $('#address').val() && $('#phone').val() && $('#name').val()) {
           Materialize.toast('Thank you for your order!', 4000);
+          return true;
         } else {
           Materialize.toast('Something\'s wrong!\nPlease validate your order information and try again', 4000);
+          return false;
         }
+
 
     }
 
     $menu.click(addToCart);
-    $submit.click(submit);
+    $submit.submit(submit);
 });
